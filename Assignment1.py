@@ -1,15 +1,20 @@
 another_purchase = 'y'
 del_charge = 0.0
-purchase_total = 0
+purchase_total = 0.0
 n = 0
-while another_purchase == 'y' or another_purchase == 'Y':
-    purchase_total = 0
-    while purchase_total >= 0:
+while (another_purchase == 'y' or another_purchase == 'Y'):
+    print(another_purchase)
+    purchase_total = 0.0
+    while purchase_total >= 0.0:
         purchase_total = float(input('Please enter purchase total:'))
         if purchase_total > 150:
             n = int(input('Please enter number of the items:'))
             del_day = int(input('Please enter delivery day ([1] for 1st day and [2] for 2nd day:'))
-            
+			
+            while not (del_day == 1 or del_day == 2):
+                print('Invalid Input');
+                del_day = int(input('... and [2] for 2nd day:'))
+                #Please enter delivery day ([1] for 1st day
             if n <= 5 and del_day == 1:
                 del_charge = 8.0
             elif n <= 5 and del_day == 2:
@@ -27,7 +32,10 @@ while another_purchase == 'y' or another_purchase == 'Y':
         #elif
         else:
             print('ERR: Sorry, purchase total need to be above $150.')
+            print(another_purchase)
         another_purchase = input('Do you want to calculate delivery charges for another purchase? (y/n)')
+
+print(another_purchase)
 print(n)
-print('Thanks for using the delivery charges Calculator!/nSee you again!')
+print('Thanks for using the delivery charges Calculator!\nSee you again!')
 
