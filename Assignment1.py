@@ -12,7 +12,7 @@ purchase_total = 0.0
 n = 0
 #Repeating the delivery calculator if user enters y or Y
 while (another_purchase == 'y' or another_purchase == 'Y'):
-    purchase_total = float(input('Please enter purchase total:'))
+    purchase_total = float(input('\nPlease enter purchase total:'))
     #checking for purchase total is above 150 or not
     if purchase_total > 150:
         n = int(input('Please enter number of the items:'))
