@@ -35,7 +35,9 @@ while (another_purchase == 'y' or another_purchase == 'Y'):
         elif n >= 6 and del_day == 2:
             del_charge = n * 1.2
         else:
-            print('---')
+            #If non of the case behave accordingly exiting the program
+            print('Something went wrong')
+            exit()
         #Display of delivery charges and total charges as floating-point numbers with 2 decimal places
         print('Delivery Charges: ',format(del_charge,'.2f'))
         print('Total Charges: ',format(del_charge+purchase_total,'.2f'))
