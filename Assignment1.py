@@ -1,3 +1,4 @@
+#checking for users next purchase
 another_purchase = 'y'
 del_charge = 0.0
 purchase_total = 0.0
