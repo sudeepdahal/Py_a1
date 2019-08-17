@@ -45,6 +45,6 @@ while (another_purchase == 'y' or another_purchase == 'Y'):
         #else case if purchase total is below $150
         print('ERR: Sorry, purchase total need to be above $150.')
     #Asking if users wants to use the delivery calculator again
-    another_purchase = raw_input('Do you want to calculate delivery charges for another purchase? (y/n)')
+    another_purchase = input('Do you want to calculate delivery charges for another purchase? (y/n)')
 print('Thanks for using the delivery charges Calculator!\nSee you again!')
 
