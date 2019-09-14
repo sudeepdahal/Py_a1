@@ -1,3 +1,4 @@
+#counter to count the total number of purchase and delivery total
 number_of_the_purchase = 0
 cost_of_deliveries = 0
 def main():
@@ -20,10 +21,27 @@ def main():
 		question1= int(question1)
 		print('adfadfasdfadsf')
 	else:
-		 print("Not a number")'''
+		 print("Not a number")
+		 
+		 
+          purchase_total_type = None
+          while type(purchase_total_type) is not float:
+              try:
+                  purchase_total = input('\nPlease enter purchase total:')
+              except ValueError:
+                  print("%s is not float input.\n" % purchase_total_type)
+
+'''
 	#Repeating the delivery calculator if user enters y or Y
 	while (another_purchase == 'y' or another_purchase == 'Y'):
-		purchase_total = float(input('\nPlease enter purchase total:'))
+		purchase_total = None
+		while type(purchase_total) is not float:
+			try:
+				purchase_total = float(input('\nPlease enter purchase total:'))
+				#purchase_total_type = type(purchase_total)
+			except ValueError:
+				print("%s is not float input.Please Input Float value\n" % purchase_total)
+		
 		#checking for purchase total is above 150 or not
 		purchaseTotal = checkPurchaseTotal(purchase_total)
 		if purchaseTotal:
@@ -82,4 +100,3 @@ def calCharges(n,del_day,purchase_total):
 	cost_of_deliveries += del_charge
 	return del_charge,purchase_total+del_charge
 main()
-
